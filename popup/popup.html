@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="popup.js"></script>
+<script src="/vendors/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+<div id="init">
+	<label for="InServerAddress">Address*: </label><input type="text" id="InServerAddress" name="server[address]" />
+	<label for="InServerPort">Port*: </label><input type="text" id="InServerPort" name="server[port]" />
+    <label for="InMasterName">Name: </label><input type="text" id="InMasterName" name="master[name]" />
+    <!--<label for="InMasterPassword">Password: </label><input type="text" id="InMasterPassword" name="master[password]" />-->
+	<button id="ButtonCreateMaster">Create master</button>
+    <p>* required</p>
+</div>
+
+<div id="masterInfo">
+    <dl>       
+        <dt>Name</dt><dd id="OutMasterName"></dd>
+        <dt>Client port</dt><dd id="OutMasterClientPort"></dd>
+        <!--<dt>Password</dt><dd id="OutMasterPassword"></dd>-->
+        <dt>Url</dt><dd id="OutMasterClientUrl"></dd>
+        <dt>Clients</dt><dd id="OutMasterClients"></dd>
+    </dl>
+
+    <button id="ButtonReconnectMaster">Reconnect master</button>
+    <button id="ButtonDisconnectMaster">Disconnect master</button>
+    <button id="ButtonCloseMaster">Close Master</button>
+</div>
+
+<div id="error"></div>
+
+</body>
+</html>

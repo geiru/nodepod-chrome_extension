@@ -1,0 +1,21 @@
+{
+    "name": "__MSG_appName__",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "page": "background/background.html"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "tabs",
+        "<all_urls>",
+        "storage"
+    ],
+    "default_locale": "en"
+}
