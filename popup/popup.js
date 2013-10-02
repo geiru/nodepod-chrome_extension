@@ -35,6 +35,15 @@ Popup = {
             $("#masterInfo").hide();
         }
 
+        $('#OutMasterStatus').click(function() {
+            chrome.tabs.create({url: self.master.statusUrl});
+        });
+        $('#OutMasterWeinre').click(function() {
+            if (self.master.weinreUrl) {
+                chrome.tabs.create({url: self.master.weinreUrl});
+            }
+        });
+
     },
     
     createMaster: function() {    	
@@ -119,6 +128,15 @@ Popup = {
         $('#OutMasterPassword').text(self.masterPassword);
         $('#OutMasterClientUrl').text(self.master.clientUrl);
         $('#OutMasterClients').html(clients.join('<br />'));
+        $('#OutMasterStatus').html('go to status page');
+        if (self.master.weinreUrl) {
+            $('#OutMasterWeinre').show();
+            $('#OutMasterWeinre').html('go to weinre clients page');
+        }
+        else {
+            $('#OutMasterWeinre').hide();
+        }
+
 
         $("#init").hide();
         $("#masterInfo").show();
